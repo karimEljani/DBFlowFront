@@ -1,0 +1,670 @@
+
+
+<body id="kt_app_body" data-kt-app-header-fixed="true" data-kt-app-header-fixed-mobile="true"
+    data-kt-app-toolbar-enabled="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true"
+    data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true"
+    data-kt-app-sidebar-push-footer="true" class="app-default">
+    <!--begin::Theme mode setup on page load-->
+    <script>
+        var defaultThemeMode = "light";
+        var themeMode;
+
+        if (document.documentElement) {
+            if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
+                themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
+            } else {
+                if (localStorage.getItem("data-bs-theme") !== null) {
+                    themeMode = localStorage.getItem("data-bs-theme");
+                } else {
+                    themeMode = defaultThemeMode;
+                }
+            }
+
+            if (themeMode === "system") {
+                themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            }
+
+            document.documentElement.setAttribute("data-bs-theme", themeMode);
+        }            
+    </script>
+    <!--end::Theme mode setup on page load-->
+    <!--Begin::Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!--End::Google Tag Manager (noscript) -->
+
+
+    <!--begin::App-->
+    <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
+        <!--begin::Page-->
+        <div class="app-page  flex-column flex-column-fluid " id="kt_app_page">
+
+
+            
+            <!--begin::Wrapper-->
+            <div class="app-wrapper  flex-column flex-row-fluid " id="kt_app_wrapper">
+
+
+<!--begin::Main-->
+<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+    <!--begin::Content wrapper-->
+    <div class="d-flex flex-column flex-column-fluid">
+
+        <!--begin::Toolbar-->
+        <div id="kt_app_toolbar" class="app-toolbar ">
+
+            <!--begin::Toolbar container-->
+            <div id="kt_app_toolbar_container"
+                class="app-container  container-fluid d-flex flex-lg-column py-3 py-lg-6 ">
+
+
+
+                <!--begin::Page title-->
+                <div class="page-title d-flex align-items-center gap-1 me-3" data-kt-swapper="true"
+                    data-kt-swapper-mode="{default: 'prepend', lg: 'prepend'}"
+                    data-kt-swapper-parent="{default: '#kt_app_content_container', lg: '#kt_app_header_wrapper'}">
+                    <!--begin::Title-->
+                    <span class="text-gray-900 fw-bolder fs-2x">
+                        Générateur de mise en page
+                    </span>
+                    <!--end::Title-->
+
+
+                    <!--begin::Breadcrumb-->
+                    <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-base ms-3">
+
+
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-gray-700 fw-bold lh-1">
+                            <a href="index.html" class="text-gray-700 text-hover-primary">
+                                <i class="ki-duotone ki-home fs-3 text-gray-400 ms-2"></i>
+                            </a>
+                        </li>
+                        <!--end::Item-->
+
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item">
+                            <i class="ki-duotone ki-right fs-4 text-gray-700 mx-n2"></i>
+                        </li>
+                        <!--end::Item-->
+
+
+
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-gray-500">
+                            Générateur de mise en page </li>
+                        <!--end::Item-->
+
+
+                    </ul>
+                    <!--end::Breadcrumb-->
+                </div>
+                <!--end::Page title-->
+            </div>
+            <!--end::Toolbar container-->
+        </div>
+        <!--end::Toolbar-->
+
+
+        <!--begin::Content-->
+        <div id="kt_app_content" class="app-content  flex-column-fluid ">
+            <!--begin::Content container-->
+            <div id="kt_app_content_container" class="app-container  container-fluid ">
+                <!--begin::Layout Builder Notice-->
+                <div class="card mb-10">
+                    <div class="card-body d-flex align-items-center p-5 p-lg-8">
+                        <!--begin::Icon-->
+                        <div
+                            class="d-flex h-50px w-50px h-lg-80px w-lg-80px flex-shrink-0 flex-center position-relative align-self-start align-self-lg-center mt-3 mt-lg-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"
+                                class="text-primary h-75px w-75px h-lg-100px w-lg-100px position-absolute opacity-5">
+                                <path fill="currentColor"
+                                    d="M10.2,21.23,4.91,18.17a3.58,3.58,0,0,1-1.8-3.11V8.94a3.58,3.58,0,0,1,1.8-3.11L10.2,2.77a3.62,3.62,0,0,1,3.6,0l5.29,3.06a3.58,3.58,0,0,1,1.8,3.11v6.12a3.58,3.58,0,0,1-1.8,3.11L13.8,21.23A3.62,3.62,0,0,1,10.2,21.23Z">
+                                </path>
+                            </svg>
+
+                            <i
+                                class="ki-duotone ki-wrench fs-2x fs-lg-3x text-primary position-absolute"><i
+                                    class="path1"></i><i class="path2"></i></i>
+                        </div>
+                        <!--end::Icon-->
+
+                        <!--begin::Description-->
+                        <div class="ms-6">
+                            <p class="list-unstyled text-gray-600 fw-semibold fs-6 p-0 m-0">
+                                Générateur de mise en page
+                            </p>
+                        </div>
+                        <!--end::Description-->
+                    </div>
+                </div>
+                <!--end::Layout Builder Notice-->
+
+                <!--begin::Layout Builder Modal-->
+                <div class="modal fade" id="kt_layout_builder_recaptcha_modal" tabindex="-1"
+                    role="dialog">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalLabel">reCaptcha Verification
+                                </h3>
+
+                                <button class="btn btn-sm btn-icon btn-light btn-hover-primary"
+                                    data-bs-dismiss="modal" aria-label="Close">
+                                    <i class="ki ki-close fs-4 text-muted"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form">
+                                    <div class="form-group">
+                                        <script src="../recaptcha/api.js"></script>
+                                        <div class="g-recaptcha"
+                                            data-sitekey="6Lf92jMUAAAAANk8wz68r73rA2uPGr4_e0gn96BL">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary  me-2"
+                                    id="kt_layout_builder_verify">Submit</button>
+                                <button type="button"
+                                    class="btn btn-hover-light btn-text-muted fw-semibold"
+                                    data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end::Layout Builder Modal-->
+
+                <!--begin::Card-->
+                <div class="card">
+                    <!--begin::Header-->
+                    <div class="card-header card-header-stretch overflow-auto">
+                        <!--begin::Tabs-->
+                        <ul class="nav nav-stretch nav-line-tabs fw-semibold fs-6 border-transparent flex-nowrap"
+                            role="tablist" id="kt_layout_builder_tabs">
+
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab"
+                                    href="#kt_layout_builder_main" role="tab">
+                                    Main </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " data-bs-toggle="tab"
+                                    href="#kt_layout_builder_header" role="tab">
+                                    Header </a>
+                            </li>
+                        </ul>
+                        <!--end::Tabs-->
+                    </div>
+                    <!--end::Header-->
+
+                    <!--begin::Form-->
+                    <form class="form" method="POST" id="kt_layout_builder_form"
+                        action="/open-html-pro/index.php">
+                        <!--begin::Body-->
+                        <div class="card-body">
+                            <div class="tab-content pt-3">
+
+                                <!--begin::Tab pane-->
+                                <div class="tab-pane active" id="kt_layout_builder_main">
+                                    <!--begin::Form group-->
+                                    <div class="form-group">
+                                        <!--begin::Heading-->
+                                        <div class="mb-6">
+                                            <h4 class="fw-bold text-dark">Mode Thème</h4>
+                                            <div class="fw-semibold text-muted fs-7 d-block lh-1">
+                                                Profitez des modes sombre et clair.
+
+                                                
+                                            </div>
+                                        </div>
+                                        <!--end::Heading-->
+
+                                        <!--begin::Options-->
+                                        <div class="row mw-lg-600px" data-kt-buttons="true"
+                                            data-kt-buttons-target=".form-check-image,.form-check-input">
+                                            <!--begin::Col-->
+                                            <div class="col-6">
+                                                <!--begin::Option-->
+                                                <label class="form-check-image form-check-success">
+                                                    <!--begin::Image-->
+                                                    <div
+                                                        class="form-check-wrapper border-gray-200 border-2">
+                                                        <img src="assets/media/preview/light.png"
+                                                            class="mw-100 mh-250px" alt="">
+                                                    </div>
+                                                    <!--end::Image-->
+
+                                                    <!--begin::Check-->
+                                                    <div
+                                                        class="form-check form-check-custom form-check-solid form-check-sm form-check-success">
+                                                        <input class="form-check-input" type="radio"
+                                                            value="light" name="theme_mode"
+                                                            id="kt_layout_builder_theme_mode_light">
+
+                                                        <!--begin::Label-->
+                                                        <div class="form-check-label text-gray-700">
+                                                            Clair  </div>
+                                                        <!--end::Label-->
+                                                    </div>
+                                                    <!--end::Check-->
+                                                </label>
+                                                <!--end::Option-->
+                                            </div>
+                                            <!--end::Col-->
+                                            <!--begin::Col-->
+                                            <div class="col-6">
+                                                <!--begin::Option-->
+                                                <label class="form-check-image form-check-success">
+                                                    <!--begin::Image-->
+                                                    <div
+                                                        class="form-check-wrapper border-gray-200 border-2">
+                                                        <img src="assets/media/preview/dark.png"
+                                                            class="mw-100 mh-250px" alt="">
+                                                    </div>
+                                                    <!--end::Image-->
+
+                                                    <!--begin::Check-->
+                                                    <div
+                                                        class="form-check form-check-custom form-check-solid form-check-sm form-check-success">
+                                                        <input class="form-check-input" type="radio"
+                                                            value="dark" name="theme_mode"
+                                                            id="kt_layout_builder_theme_mode_dark">
+
+                                                        <!--begin::Label-->
+                                                        <div class="form-check-label text-gray-700">
+                                                            Sombre </div>
+                                                        <!--end::Label-->
+                                                    </div>
+                                                    <!--end::Check-->
+                                                </label>
+                                                <!--end::Option-->
+                                            </div>
+                                            <!--end::Col-->
+
+                                        </div>
+                                        <!--end::Options-->
+                                    </div>
+                                    <!--end::Form group-->
+                                    <div class="separator separator-dashed my-6"></div>
+
+                                    <!--begin::Form group-->
+                                    <div class="form-group d-flex flex-stack">
+                                        <!--begin::Heading-->
+                                        <div class="d-flex flex-column">
+                                            <h4 class="fw-bold text-dark">Mode RTL</h4>
+                                            <div class="fs-7 fw-semibold text-muted">
+                                                Changer la direction de la langue.
+
+                                                
+                                            </div>
+                                        </div>
+                                        <!--end::Heading-->
+
+                                        <!--begin::Option-->
+                                        <div class="d-flex justify-content-end">
+                                            <!--begin::Check-->
+                                            <div
+                                                class="form-check form-check-custom form-check-solid form-check-success form-switch">
+                                                <input type="hidden" value="false"
+                                                    name="layout-builder[layout][app][general][rtl]">
+
+                                                <input class="form-check-input w-45px h-30px"
+                                                    type="checkbox" value="true"
+                                                    name="layout-builder[layout][app][general][rtl]">
+                                            </div>
+                                            <!--end::Check-->
+                                        </div>
+                                        <!--end::Option-->
+                                    </div>
+                                    <!--end::Form group-->
+                                    <div class="separator separator-dashed my-6"></div>
+
+
+                                    <!--begin::Form group-->
+                                    <div class="form-group d-flex flex-stack">
+                                        <!--begin::Heading-->
+                                        <div class="d-flex flex-column ">
+                                            <h4 class="fw-bold text-dark">Mode largeur</h4>
+                                            <div class="fs-7 fw-semibold text-muted">Options de largeur de page
+                                            </div>
+                                        </div>
+                                        <!--end::Heading-->
+
+                                        <!--begin::Options-->
+                                        <div class="d-flex gap-7">
+                                            <!--begin::Check-->
+                                            <div
+                                                class="form-check form-check-custom form-check-success form-check-solid form-check-sm">
+                                                <input class="form-check-input" type="radio" checked=""
+                                                    value="default"
+                                                    id="kt_layout_builder_page_width_default"
+                                                    name="layout-builder[layout][app][general][page-width]">
+
+                                                <!--begin::Label-->
+                                                <label
+                                                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                                                    for="kt_layout_builder_page_width_default">
+                                                    Défaut </label>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Check-->
+                                            <!--begin::Check-->
+                                            <div
+                                                class="form-check form-check-custom form-check-success form-check-solid form-check-sm">
+                                                <input class="form-check-input" type="radio"
+                                                    value="fluid"
+                                                    id="kt_layout_builder_page_width_fluid"
+                                                    name="layout-builder[layout][app][general][page-width]">
+
+                                                <!--begin::Label-->
+                                                <label
+                                                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                                                    for="kt_layout_builder_page_width_fluid">
+                                                    Fluide </label>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Check-->
+                                            <!--begin::Check-->
+                                            <div
+                                                class="form-check form-check-custom form-check-success form-check-solid form-check-sm">
+                                                <input class="form-check-input" type="radio"
+                                                    value="fixed"
+                                                    id="kt_layout_builder_page_width_fixed"
+                                                    name="layout-builder[layout][app][general][page-width]">
+
+                                                <!--begin::Label-->
+                                                <label
+                                                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                                                    for="kt_layout_builder_page_width_fixed">
+                                                    Fixé </label>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Check-->
+                                        </div>
+                                        <!--end::Options-->
+                                    </div>
+                                    <!--end::Form group-->
+                                    <div class="separator separator-dashed my-6"></div>
+
+
+                                    <!--begin::Form group-->
+                                    <div class="form-group d-flex flex-stack">
+                                        <!--begin::Heading-->
+                                        <div class="d-flex flex-column ">
+                                            <h4 class="fw-bold text-dark">Style Keenicons</h4>
+
+                                            <div>
+                                                <span class="fs-7 fw-semibold text-muted">Sélectionnez le style global des icônes de l’interface utilisateur.</span>
+                                                
+                                            </div>
+                                        </div>
+                                        <!--end::Heading-->
+
+                                        <!--begin::Options-->
+                                        <div class="d-flex flex-stack gap-3 mw-lg-600px"
+                                            data-kt-buttons="true"
+                                            data-kt-buttons-target=".form-check-image,.form-check-input">
+
+                                            <!--begin::Option-->
+                                            <label
+                                                class="form-check-image form-check-success w-100 parent-active parent-hover active">
+                                                <!--begin::Image-->
+                                                <div
+                                                    class="form-check-wrapper d-flex flex-center border-gray-200 border-2 mb-0 py-3 px-4">
+                                                    <i
+                                                        class="ki-duotone ki-picture fs-1 text-gray-500 parent-active-gray-700 parent-hover-gray-700"><i
+                                                            class="path1"></i><i class="path2"></i></i>
+                                                    <span
+                                                        class="fs-7 fw-semibold ms-2 text-gray-500 parent-active-gray-700 parent-hover-gray-700">Bichromie</span>
+                                                </div>
+                                                <!--end::Image-->
+
+                                                <!--begin::Check-->
+                                                <div
+                                                    style="visibility: hidden; height: 0 !important; width: 0 !importnat; overflow:hidden">
+                                                    <input class="form-check-input" type="radio"
+                                                        value="duotone" checked=""
+                                                        name="layout-builder[layout][app][general][icons]">
+                                                </div>
+                                                <!--end::Check-->
+                                            </label>
+                                            <!--end::Option-->
+
+                                            <!--begin::Option-->
+                                            <label
+                                                class="form-check-image form-check-success w-100 parent-active parent-hover ">
+                                                <!--begin::Image-->
+                                                <div
+                                                    class="form-check-wrapper d-flex flex-center border-gray-200 border-2 mb-0 py-3 px-4">
+                                                    <i
+                                                        class="ki-outline ki-picture fs-1 text-gray-500 parent-active-gray-700 parent-hover-gray-700"></i>
+                                                    <span
+                                                        class="fs-7 fw-semibold ms-2 text-gray-500 parent-active-gray-700 parent-hover-gray-700">Contour</span>
+                                                </div>
+                                                <!--end::Image-->
+
+                                                <!--begin::Check-->
+                                                <div
+                                                    style="visibility: hidden; height: 0 !important; width: 0 !importnat; overflow:hidden">
+                                                    <input class="form-check-input" type="radio"
+                                                        value="outline"
+                                                        name="layout-builder[layout][app][general][icons]">
+                                                </div>
+                                                <!--end::Check-->
+                                            </label>
+                                            <!--end::Option-->
+
+                                            <!--begin::Option-->
+                                            <label
+                                                class="form-check-image form-check-success w-100 parent-active parent-hover ">
+                                                <!--begin::Image-->
+                                                <div
+                                                    class="form-check-wrapper d-flex flex-center border-gray-200 border-2 mb-0 py-3 px-4">
+                                                    <i
+                                                        class="ki-solid ki-picture fs-1 text-gray-500 parent-active-gray-700 parent-hover-gray-700"></i>
+                                                    <span
+                                                        class="fs-7 fw-semibold ms-2 text-gray-500 parent-active-gray-700 parent-hover-gray-700">Solide</span>
+                                                </div>
+                                                <!--end::Image-->
+
+                                                <!--begin::Check-->
+                                                <div
+                                                    style="visibility: hidden; height: 0 !important; width: 0 !importnat; overflow:hidden">
+                                                    <input class="form-check-input" type="radio"
+                                                        value="solid"
+                                                        name="layout-builder[layout][app][general][icons]">
+                                                </div>
+                                                <!--end::Check-->
+                                            </label>
+                                            <!--end::Option-->
+
+                                        </div>
+                                        <!--end::Options-->
+                                    </div>
+                                    <!--end::Form group-->
+                                    <div class="separator separator-dashed my-6"></div>
+
+                                    <!--begin::Form group-->
+                                    <div class="form-group d-flex flex-stack">
+                                        <!--begin::Heading-->
+                                        <div class="d-flex flex-column">
+                                            <h4 class="fw-bold text-dark">Chargeur de page</h4>
+                                            <div class="fs-7 fw-semibold text-muted">Afficher l'indicateur de chargement de la page</div>
+                                        </div>
+                                        <!--end::Heading-->
+
+                                        <!--begin::Option-->
+                                        <div class="d-flex justify-content-end gap-7">
+                                            <!--begin::Check-->
+                                            <div
+                                                class="form-check form-check-custom form-check-success form-check-solid form-check-sm">
+                                                <input class="form-check-input" type="radio" checked=""
+                                                    value="none" id="kt_builder_page_loader_type_none"
+                                                    name="layout-builder[layout][app][page-loader][type]">
+
+                                                <!--begin::Label-->
+                                                <label
+                                                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                                                    for="kt_builder_page_loader_type_none">
+                                                    Aucun </label>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Check-->
+                                            <!--begin::Check-->
+                                            <div
+                                                class="form-check form-check-custom form-check-success form-check-solid form-check-sm">
+                                                <input class="form-check-input" type="radio"
+                                                    value="default"
+                                                    id="kt_builder_page_loader_type_default"
+                                                    name="layout-builder[layout][app][page-loader][type]">
+
+                                                <!--begin::Label-->
+                                                <label
+                                                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                                                    for="kt_builder_page_loader_type_default">
+                                                    Défaut </label>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Check-->
+                                            <!--begin::Check-->
+                                            <div
+                                                class="form-check form-check-custom form-check-success form-check-solid form-check-sm">
+                                                <input class="form-check-input" type="radio"
+                                                    value="spinner-message"
+                                                    id="kt_builder_page_loader_type_spinner-message"
+                                                    name="layout-builder[layout][app][page-loader][type]">
+
+                                                <!--begin::Label-->
+                                                <label
+                                                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                                                    for="kt_builder_page_loader_type_spinner-message">
+                                                    Message </label>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Check-->
+                                            <!--begin::Check-->
+                                            <div
+                                                class="form-check form-check-custom form-check-success form-check-solid form-check-sm">
+                                                <input class="form-check-input" type="radio"
+                                                    value="spinner-logo"
+                                                    id="kt_builder_page_loader_type_spinner-logo"
+                                                    name="layout-builder[layout][app][page-loader][type]">
+
+                                                <!--begin::Label-->
+                                                <label
+                                                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                                                    for="kt_builder_page_loader_type_spinner-logo">
+                                                    Logo </label>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Check-->
+                                        </div>
+                                        <!--end::Option-->
+                                    </div>
+                                    <!--end::Form group-->
+                                </div>
+                                <!--end::Tab pane-->
+
+                                <!--begin::Tab pane-->
+                                <div class="tab-pane " id="kt_layout_builder_header">
+
+                                    <!--begin::Form group-->
+                                    <div class="form-group d-flex flex-stack">
+                                        <!--begin::Heading-->
+                                        <div class="d-flex flex-column">
+                                            <h4 class="fw-bold text-dark">En-tête fixe</h4>
+
+                                            <div class="fs-7 fw-semibold text-muted">
+                                                Activer l'en-tête fixe
+
+                                            </div>
+                                        </div>
+                                        <!--end::Heading-->
+
+                                        <!--begin::Option-->
+                                        <div class="d-flex justify-content-end">
+                                            <!--begin::Check-->
+                                            <div
+                                                class="form-check form-check-solid form-check-custom form-check-success form-switch">
+                                                <input type="hidden" value="false"
+                                                    name="layout-builder[layout][app][header][default][fixed][desktop]">
+
+                                                <input class="form-check-input w-45px h-30px"
+                                                    type="checkbox" checked="" value="true"
+                                                    name="layout-builder[layout][app][header][default][fixed][desktop]">
+                                            </div>
+                                            <!--end::Check-->
+                                        </div>
+                                        <!--end::Option-->
+                                    </div>
+                                    <!--end::Form group-->
+                                </div>
+                                <!--end::Tab pane-->
+                            </div>
+                        </div>
+                        <!--end::Body-->
+
+                        <!--begin::Footer-->
+                        <div class="card-footer d-flex py-8">
+                            <input type="hidden" id="kt_layout_builder_tab" name="layout-builder[tab]"
+                                value="">
+                            <input type="hidden" id="kt_layout_builder_action"
+                                name="layout-builder[action]">
+
+                            <button type="button" id="kt_layout_builder_preview"
+                                class="btn btn-primary me-2">
+                                <span class="indicator-label">
+                                    Aperçu
+                                </span>
+                                <span class="indicator-progress">
+                                    S'il vous plaît, attendez... <span
+                                        class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                </span>
+                            </button>
+
+
+                            <button type="button" id="kt_layout_builder_export"
+                                class="btn btn-light me-2">
+                                <span class="indicator-label">
+                                    Exporter
+                                </span>
+                                <span class="indicator-progress">
+                                    S'il vous plaît, attendez... <span
+                                        class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                </span>
+                            </button>
+
+                            <button type="button" id="kt_layout_builder_reset"
+                                class="btn btn-active-light btn-color-muted">
+                                <span class="indicator-label">
+                                    Réinitialiser
+                                </span>
+                                <span class="indicator-progress">
+                                    S'il vous plaît, attendez... <span
+                                        class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <!--end::Footer-->
+                    </form>
+                    <!--end::Form-->
+                </div>
+                <!--end::Card-->
+            </div>
+            <!--end::Content container-->
+        </div>
+        <!--end::Content-->
+    </div>
+    <!--end::Content wrapper-->
+
+
+    
+</div>
+<!--end:::Main-->
+</div>
+</div>
+</div>
+</body>
