@@ -12,8 +12,18 @@ import Swal from 'sweetalert2';
 })
 export class RoleViewComponent {
 
-  user: Users = new Users();
-
+  user: Users = { // Default user object
+    userId: undefined,
+    username: '',
+    name: '',
+    password: '',
+    role: [],
+    id: undefined,
+    code: '',
+    image: '',
+    activated:'',
+      response:''
+  };
   
   users: Users[] = [];
   roles: string[] = [];

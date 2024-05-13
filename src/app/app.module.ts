@@ -23,6 +23,26 @@ import { ChatsComponent } from './chats/chats.component';
 import { PersonnaliserComponent } from './personnaliser/personnaliser.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ParametreCompteComponent } from './parametre-compte/parametre-compte.component';
+import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table'; // For using p-table and its features
+import { RippleModule } from 'primeng/ripple';
+import { ToastModule } from 'primeng/toast';
+import { ToolbarModule } from 'primeng/toolbar';
+import { RatingModule } from 'primeng/rating';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { DropdownModule } from 'primeng/dropdown';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { DialogModule } from 'primeng/dialog';
+import { FileUploadModule } from 'primeng/fileupload';
+import { PaginatorModule } from 'primeng/paginator'; // Import for p-paginator
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -46,12 +66,22 @@ import { ParametreCompteComponent } from './parametre-compte/parametre-compte.co
     HttpClientModule,
     RouterModule,
     ReactiveFormsModule,
-    FormsModule
-    
-    
-    
-    
-  
+    FormsModule,
+    ButtonModule,
+    TableModule,
+    RippleModule,
+        ToastModule,
+        ToolbarModule,
+        RatingModule,
+        InputTextModule,
+        InputTextareaModule,
+        DropdownModule,
+        RadioButtonModule,
+        InputNumberModule,
+        DialogModule,
+        FileUploadModule,
+        PaginatorModule,
+        NoopAnimationsModule
   ],
   providers:[
      AuthGuard,

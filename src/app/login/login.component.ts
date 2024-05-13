@@ -29,9 +29,9 @@ export class LoginComponent {
 
         const role = response.user.role[0].roleName;
         if(role === 'Admin') {
-          this.router.navigate(['/userslist']);
+          this.router.navigate(['/chats']);
         } else {
-          this.router.navigate(['/userslist']) //update later
+          this.router.navigate(['/chats']) //update later
         }
       },
       (error)=>{

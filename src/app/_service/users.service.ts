@@ -18,6 +18,7 @@ export class UsersService {
   private baseURL = "http://localhost:8080/admin/users";
   private authURL = "http://localhost:8080/authenticate";
   private rolesUrl ="http://localhost:8080/admin/roles";
+  
 
 
   private usersSubject = new BehaviorSubject<Users[]>([]);
@@ -122,6 +123,31 @@ export class UsersService {
   addUserByAdmin(user: any, selectedRole: string) {
     return this.httpClient.post('/admin/users', user, { params: { selectedRole } });
   }
+
+  
+  deleteMultipleUsers(userIds: number[]): Observable<void> {
+    const url = `${this.baseURL}/delete-multiple`; // Ne pas inclure de valeurs dans le chemin
+    const body = { userIds }; // Envoyer les IDs dans le corps de la requête
+
+    return this.httpClient.request<void>('DELETE', url, {
+        headers: this.getRequestHeaders(),
+        body, // Envoyer le corps
+    }).pipe(
+        catchError((error) => {
+            console.error("Erreur lors de la suppression des utilisateurs:", error);
+            return throwError("La suppression a échoué. Veuillez réessayer.");
+        })
+    );
+}
+
+
+
+
+
+
+
+  
+
   
   
 }

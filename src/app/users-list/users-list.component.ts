@@ -12,8 +12,18 @@ import { ExportService } from '../_service/export.service';
   styleUrls: ['./users-list.component.css']
 })
 export class UsersListComponent {
-  user: Users = new Users();
-
+  user: Users = { // Default user object
+    userId: undefined,
+    username: '',
+    name: '',
+    password: '',
+    role: [],
+    id: undefined,
+    code: '',
+    image: '',
+    activated:'',
+      response:''
+  };
   
   users: Users[] = [];
   roles: string[] = [];

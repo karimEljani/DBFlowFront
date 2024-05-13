@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 })
 export class UsersViewComponent {
 
-  user: Users = new Users();
+//  user: Users = new Users();
 
   
   users: Users[] = [];

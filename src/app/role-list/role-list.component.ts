@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./role-list.component.css']
 })
 export class RoleListComponent {
+  
 
 }
